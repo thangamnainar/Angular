@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'My Firstproject';
+
+  a:string="StringInterPolation";
+  b:string="PropertyBinding";
+  c:string="EventBinding";
 }
