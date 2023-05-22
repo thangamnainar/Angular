@@ -1,24 +1,23 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {FormsModule} from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ComponentPageComponent } from './component-page/component-page.component';
-import { DatabindingComponent } from './databinding/databinding.component';
-import { DirectivesComponent } from './directives/directives.component';
-
+import { MyappComponent } from './myapp/myapp.component';
+import { LifeCycleHooksComponent } from './life-cycle-hooks/life-cycle-hooks.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ComponentPageComponent,
-    DatabindingComponent,
-    DirectivesComponent,
- 
+    MyappComponent,
+    LifeCycleHooksComponent,
+  
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

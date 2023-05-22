@@ -9,17 +9,26 @@
 
 
 <!-- Toolbar -->
-   
-  <div class="container">
-    <a routerLink="Home">Home</a>
-    <h1>Welcome home page</h1>
-    <h2>One Way Binding</h2>
-    <p>{{a}}</p>
-    <p>{{b}}</p>
-    <p>{{c}}</p>
 
+<div class="container-fluid whole-container">
+  <div class="row">
+    <div class=" col-md-2 box">
+      <ul>
+        <li><a routerLink="componentPage">Components</a></li>
+        <li><a routerLink="databindingPage">Data Binding</a></li>
+        <li> <a routerLink="directivesPage">Directives</a> </li>
+      </ul>
+    </div>
+    <div class="col-md-10">
+      <h1>Welcome to Angular</h1>
+      <router-outlet></router-outlet>
+    </div>
   </div>
-  <router-outlet></router-outlet>
+
+
+
+
+</div>
 
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
@@ -29,4 +38,3 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-

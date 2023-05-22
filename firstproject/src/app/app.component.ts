@@ -11,4 +11,5 @@ export class AppComponent {
   a:string="StringInterPolation";
   b:string="PropertyBinding";
   c:string="EventBinding";
+  style:string='color:pink; font-size:40px;';
 }

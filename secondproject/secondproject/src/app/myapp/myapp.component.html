@@ -1,0 +1,59 @@
+<p>myapp works!</p>
+<p>{{a}}</p>
+{{2*3}}
+{{'WELCOME '+ a}}
+<input type="text" value="{{a}}">
+<br>    
+<input type="text" [value]="a" [disabled]="isDisabled">
+
+ <button (click)="onClick()">clickme </button> 
+<br>
+<input type="text" #templateReference [value]="a" [disabled]="isDisabled">
+
+<button (click)="onClick2($event)">clickme </button>
+<br>
+{{templateReference.value}}
+
+<p *ngIf="show; else elseBlock">Directives</p>
+
+<p *ngIf="!show"> not simple</p>
+
+<ng-template #elseBlock>
+    <p>elseBlock ............</p>
+</ng-template>
+
+<ul>
+    <li *ngFor="let i of array2; index as j">
+        <ng-container>
+            <p>{{ i.name }}, {{ i.age }}</p>
+          </ng-container>
+        {{ array2[j]}}
+        {{j}}
+    </li>
+</ul>
+
+<ul>
+    <li *ngFor="let i of array; first as f">
+        {{i}}
+        {{f}}
+    </li>
+</ul>
+<ul>
+    <li *ngFor="let i of array; last as j">
+        {{i}}
+        {{j}}
+    </li>
+</ul>
+
+<input type="text" [value]="a"><button (click)="onClick()">clickme </button>
+
+
+<h1>two data binding</h1>
+<input type="text" [(ngModel)]="twoWay">
+{{twoWay}}
+
+<!-- 22/05/2023 -->
+
+
+
+

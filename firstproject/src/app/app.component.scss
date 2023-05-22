@@ -1,4 +1,29 @@
-.container{
-    border: 1px solid blue;
-    color: red;
+.whole-container{
+    
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // height: 100vh;
+
+    .box{
+        border: 1px solid blue;
+        height: 100vh;
+        padding-top: 10vh;
+        background-color: #e6e6ff;
+        li{
+            list-style: none;
+            padding: 1vh;
+            
+            a{
+                text-decoration: none;
+                color: black;
+                padding: .8vh;
+
+            }
+
+            a:hover{
+                background-color:  #ccccff;
+            }
+        }
+    }
 }
