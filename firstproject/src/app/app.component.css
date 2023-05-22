@@ -1,0 +1,43 @@
+.navbar {
+  position: fixed;
+  z-index: 9999;
+}
+
+.whole-container {
+  position: relative;
+}
+.whole-container .box {
+  border: 1px solid blue;
+  height: 100vh;
+  padding-top: 10vh;
+  background-color: #e6e6ff;
+  top: 5.8vh;
+  position: fixed;
+}
+.whole-container .box .heading {
+  background-color: #ccccff;
+  padding: 1.5vh;
+  font-size: 2vh;
+  margin-top: 5vh;
+  border-radius: 10vh;
+}
+.whole-container .box ul {
+  padding-top: 3.5vh;
+}
+.whole-container .box ul li {
+  list-style: none;
+  padding: 1vh;
+}
+.whole-container .box ul li a {
+  text-decoration: none;
+  color: black;
+  padding: 0.8vh;
+}
+.whole-container .box ul li a:hover {
+  background-color: #ccccff;
+}
+.whole-container .col-md-10 {
+  position: absolute;
+  top: 5.8vh;
+  left: 30vh;
+}/*# sourceMappingURL=app.component.css.map */

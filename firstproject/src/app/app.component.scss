@@ -1,15 +1,26 @@
+.navbar {
+    position: fixed;
+    z-index: 9999;
+  }
 .whole-container{
-    
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    // height: 100vh;
-
+    position: relative;
     .box{
         border: 1px solid blue;
         height: 100vh;
         padding-top: 10vh;
         background-color: #e6e6ff;
+        top: 5.8vh;
+        position: fixed;
+
+        .heading{
+            background-color: #ccccff;
+            padding: 1.5vh;
+            font-size: 2vh;
+            margin-top: 5vh;
+            border-radius: 10vh;
+        }
+       ul{
+        padding-top: 3.5vh;
         li{
             list-style: none;
             padding: 1vh;
@@ -25,5 +36,12 @@
                 background-color:  #ccccff;
             }
         }
+       }
+    }
+
+    .col-md-10{
+        position: absolute;
+        top: 5.8vh;
+        left: 30vh;
     }
 }

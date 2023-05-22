@@ -1,4 +1,40 @@
-<p>component-page works!</p>
-<div class="">
-    <h2 ><button (click)="decrement()">-</button> {{count}} <button (click)="increment()">+</button> </h2>
+<h1>Components</h1>
+<div class="container ">
+   <div class="contents">
+    <p>
+        In Angular, a component is a fundamental building block of the application that encapsulates the logic, data, and user interface (UI) elements. Components are responsible for managing a specific part of the user interface and can be reused throughout the application.
+    </p>
+    <span>Component Creation :</span><br>
+    <p>
+        running the command
+        ng generate component component-name or its shorthand ng g c component-name
+    </p>
+    <span> Component Structure : </span><br>
+    <p>
+       Once the component is generated, you can open the TypeScript file (component-name.component.ts) and define the component class. The class is annotated with the @Component decorator, which provides metadata for the component, such as its selector, template, styles, and more.
+    </p>
+    <span> Component Template :   </span><br>
+    <p>
+       The component template is defined in the HTML file (component-name.component.html). It represents the UI structure and content of the component. You can use HTML tags, Angular directives, and binding syntax to create dynamic and interactive templates.
+    </p>
+    <span>Component Styles : </span><br>
+    <p>
+        The component styles can be defined in the CSS file (component-name.component.css). You can write custom styles specific to the component, including layout, colors, and other visual aspects.
+    </p>
+    <span> Component Logic : </span><br>
+    <p>
+       Inside the component class, you can define properties and methods to manage the component's data and behavior. You can access and modify data, interact with services, handle events, and more.
+    </p>
+    <span>  Component Lifecycle Hooks : </span><br>
+    <p>
+      Angular provides several lifecycle hooks that allow you to execute code at specific stages of a component's lifecycle. Some common hooks include ngOnInit (called after the component is initialized), ngOnChanges (called when input properties change), and ngOnDestroy (called before the component is destroyed).
+    </p>
+    <span>  Component Interactions :</span><br>
+    <p>
+        Finally, you can integrate the component into your application by referencing its selector in other templates or routing configurations.
+    </p>
+   </div>
 </div>
+<!-- <div class="">
+    <h2 ><button (click)="decrement()">-</button> {{count}} <button (click)="increment()">+</button> </h2>
+</div> -->

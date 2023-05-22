@@ -1,7 +1,8 @@
-import { Component, OnInit , OnChanges, SimpleChanges,AfterContentInit, AfterViewInit,AfterViewChecked,AfterContentChecked ,OnDestroy} from '@angular/core';
+import { Component, OnInit , OnChanges, SimpleChanges,AfterContentInit, AfterViewInit,AfterViewChecked,AfterContentChecked ,OnDestroy,Input} from '@angular/core';
 
 @Component({
-  selector: '[app-myapp]',
+  // selector: '[app-myapp]',
+  selector:'app-myapp',
   // selector: '.app-myapp',
   templateUrl: './myapp.component.html',
   styleUrls: ['./myapp.component.sass']
@@ -12,13 +13,26 @@ export class MyappComponent implements OnInit,OnChanges,AfterViewInit,AfterConte
   isDisabled:boolean=false;
   show:boolean=false;
   array=['html','css','boot','js'];
-  array2=[
-   
-    {name:'siva',age:20},
-    {name:'raja',age:23}
-  ];
-
+  array2=[{
+    "name": "John Doe",
+    "age": 30,
+    "email": "johndoe@example.com",
+    "address": {
+      "street": "123 Main Street",
+      "city": "Cityville",
+      "state": "State",
+      "country": "Country"
+    },
+    "skills": ["JavaScript", "HTML", "CSS"],
+    "isActive": true
+  }];
   twoWay:string='siva';
+
+
+  @Input() public property:any;
+  @Input() public jsonProperty:any;
+
+
 
   constructor(){
     console.log('insode constructer');
