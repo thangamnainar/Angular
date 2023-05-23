@@ -12,4 +12,10 @@ export class AppComponent {
   b:string="PropertyBinding";
   c:string="EventBinding";
   style:string='color:pink; font-size:40px;';
+
+
+  sendPerson:any=[
+    { name:"siva",age:20,gender:'Male'},
+    { name:"Dube",age:25,gender:'Male'},
+  ];
 }

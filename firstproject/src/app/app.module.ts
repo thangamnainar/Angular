@@ -8,6 +8,7 @@ import { DatabindingComponent } from './databinding/databinding.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { ComponentInteractionsComponent } from './component-interactions/component-interactions.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { ChildComponent } from './child/child.component';
     DirectivesComponent,
     ParentComponent,
     ChildComponent,
+    ComponentInteractionsComponent,
  
   ],
   imports: [

@@ -5,6 +5,7 @@ import { DatabindingComponent } from './databinding/databinding.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { ComponentInteractionsComponent } from './component-interactions/component-interactions.component';
 
 const routes: Routes = [
  {
@@ -17,11 +18,15 @@ const routes: Routes = [
     path:'directivesPage',component:DirectivesComponent 
   },
   {
+    path:'componentInteractions',component:ComponentInteractionsComponent
+  },
+  {
     path:'parentComponent',component:ParentComponent
   },
   {
     path:'childComponent',component:ChildComponent
   },
+
   
 ];
 

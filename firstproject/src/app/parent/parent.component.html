@@ -1,3 +1,38 @@
-<p>parent........ works!</p>
-<app-child [recivePerson]="sendPerson"></app-child>
+<h2>parent works!</h2>
+<!-- {{reciveEmpDetails|json}}............. -->
+    <h3>Child to Parent</h3>
+<table>
+    <thead>
+        <tr>
+            <td>Name</td>
+            <td>Age</td>
+            <td>Gender</td>
+            <td>Address</td>
+            <td>PinCode</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of reciveEmpDetails">
+            <td>
+                {{item.name}}
+            </td>
+            <td>
+                {{item.age}}
+            </td>
+            <td>
+                {{item.gender}}
+            </td>
+            <td>
+                {{item.address.city }}
+            </td>
+            <td>
+                {{item.address.pincode }}
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<p>Child Message : {{getMsgFromChildAfteView}}</p>
+
+<app-child (sendEmpDetails)="getEmpDetails($event)"  [recivePerson]="sendPerson"></app-child>
 

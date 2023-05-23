@@ -1,3 +1,30 @@
-<p>child works!</p>
+<div class="childComponent">
+    <h2>child works!</h2>
+    <h3>Parent to Child </h3>
 
-<h1>{{recivePerson}}..........</h1>
+    <!-- <h1>{{recivePerson|json}}.....</h1> -->
+
+    <table>
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Age</td>
+                <td>Gender</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of recivePerson">
+                <td>
+                    {{item.name}}
+                </td>
+                <td>
+                    {{item.age}}
+                </td>
+                <td>
+                    {{item.gender}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
