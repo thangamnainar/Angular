@@ -1,6 +1,15 @@
 import { Component,AfterViewInit, ViewChild } from '@angular/core';
 import { ChildComponent } from '../child/child.component';
 
+interface Person {
+  name: string;
+  age: number;
+  gender: string;
+  address: {
+    city: string;
+    pincode: number;
+  };
+}
 @Component({
   selector: 'app-parent',
   templateUrl: './parent.component.html',
@@ -8,7 +17,9 @@ import { ChildComponent } from '../child/child.component';
 })
 export class ParentComponent implements AfterViewInit{
 
-  reciveEmpDetails:any;
+ 
+  
+  reciveEmpDetails: Person[] = []; 
   getMsgFromChildAfteView:string='';
   @ViewChild(ChildComponent) vname:any;
 
@@ -21,9 +32,11 @@ export class ParentComponent implements AfterViewInit{
     { name:"Pathirana",age:20,gender:'Male'},
   ];
 
-  getEmpDetails(event:any){
-    this.reciveEmpDetails=event;
-    console.log( this.reciveEmpDetails);
+  getEmpDetails($event:any){
+    this.reciveEmpDetails=$event;
+    console.warn($event);
+    
+    console.warn('.............', this.reciveEmpDetails);
     
   };
 
@@ -33,6 +46,7 @@ export class ParentComponent implements AfterViewInit{
     this.vname.sendMsgtoParent
     console.warn(this.getMsgFromChildAfteView);
     
+    
   }
-
+ 
 };

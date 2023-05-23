@@ -8,7 +8,7 @@ import { Component,EventEmitter,Input,Output,OnInit } from '@angular/core';
 export class ChildComponent implements OnInit{
 
   sendMsgtoParent:string="I'm child... Dad..";
-  employeeDetails:any=[
+  employeeDetails:any[]=[
     {name:'Ram',age:22,gender:'Male',address:{city:'chennai',pincode:600012}},
     {name:'Selva',age:26,gender:'Male',address:{city:'chennai',pincode:600012}},
     {name:'Mohan',age:24,gender:'Male',address:{city:'chennai',pincode:600012}},
@@ -22,7 +22,12 @@ export class ChildComponent implements OnInit{
   @Output() public sendEmpDetails:any=new EventEmitter();
 
   ngOnInit(): void {
+    // this.sendEmpDetails.emit(this.employeeDetails);
+  };
+
+  buttonClick(){
     this.sendEmpDetails.emit(this.employeeDetails);
+
   }
 
   

@@ -1,0 +1,7 @@
+.childComponent {
+  border: 2px solid;
+  padding: 4vh;
+}
+.childComponent table, .childComponent td {
+  border: 1px solid;
+}/*# sourceMappingURL=child.component.css.map */
