@@ -1,4 +1,4 @@
-<!-- <p>myapp works!</p>
+<p>myapp works!</p>
 <p>{{a}}</p>
 {{2*3}}
 
@@ -41,7 +41,7 @@
 </ul>
 <ul>
     <li *ngFor="let s of array; last as j">
-        {{i}}
+        {{s}}
         {{j}}
     </li>
 </ul>
@@ -51,7 +51,12 @@
 
 <h1>two data binding</h1>
 <input type="text" [(ngModel)]="twoWay">
-{{twoWay}} -->
+{{twoWay}}
+<br>
+<br>
+<br>
+<br>
+<br>
 
 <!-- 22/05/2023 -->
 
@@ -59,9 +64,13 @@ title {{property}} <br>
 jsonProperty{{jsonProperty}}
 <ul>
     <li *ngFor="let item of jsonProperty">
-      {{ item | json  }}
+      <!-- Length: {{ getObjectLength(item) }} -->
+      Object: {{ item.name }}
     </li>
   </ul>
+................
+
+<button (click)="clickButton()"> button outset</button>
+
+{{outset}}
   
-
-

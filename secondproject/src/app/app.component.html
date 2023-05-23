@@ -1,5 +1,13 @@
 <h1>App  works!</h1>
-<app-myapp [property]="title" [jsonProperty]="json"></app-myapp>   
+<!-- {{message | json}} -->
+<ul>
+    <li *ngFor="let item of message">
+        <p>Object: {{ item|json }}</p>
+
+    </li>
+</ul>
+<h1>{{message}}...........</h1>
+<app-myapp (outset)="captureChild($event)"  (outset)="message=($event)" [property]="title" [jsonProperty]="json"></app-myapp>   
 <!-- <div class=".app-myapp"></div> -->
 <!-- <div app-myapp ></div> -->
 <!-- <app-life-cycle-hooks></app-life-cycle-hooks> -->

@@ -1,4 +1,4 @@
-import { Component, OnInit , OnChanges, SimpleChanges,AfterContentInit, AfterViewInit,AfterViewChecked,AfterContentChecked ,OnDestroy,Input} from '@angular/core';
+import { Component, OnInit , OnChanges, SimpleChanges,AfterContentInit, AfterViewInit,AfterViewChecked,AfterContentChecked ,OnDestroy,Input,Output, EventEmitter} from '@angular/core';
 
 @Component({
   // selector: '[app-myapp]',
@@ -14,25 +14,21 @@ export class MyappComponent implements OnInit,OnChanges,AfterViewInit,AfterConte
   show:boolean=false;
   array=['html','css','boot','js'];
   array2=[{
-    "name": "John Doe",
-    "age": 30,
-    "email": "johndoe@example.com",
-    "address": {
-      "street": "123 Main Street",
-      "city": "Cityville",
-      "state": "State",
-      "country": "Country"
-    },
-    "skills": ["JavaScript", "HTML", "CSS"],
-    "isActive": true
+    name: "John Doe",
+    age: 30,
+    email: "johndoe@example.com"
   }];
   twoWay:string='siva';
 
-
+//component to component interaction
   @Input() public property:any;
   @Input() public jsonProperty:any;
 
+  @Output() public outset=new EventEmitter();
 
+  clickButton(){
+    this.outset.emit(this.array2)
+  }
 
   constructor(){
     console.log('insode constructer');
@@ -71,6 +67,8 @@ export class MyappComponent implements OnInit,OnChanges,AfterViewInit,AfterConte
   }
   ngOnInit(): void {
     // throw new Error('Method not implemented.');
+    this.outset.emit(this.array2)
+
     console.log('inside ngOninit');
     
   }

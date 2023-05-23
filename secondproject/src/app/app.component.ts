@@ -1,12 +1,16 @@
-import { Component } from '@angular/core';
+import { Component,OnInit, ViewChild,AfterViewInit } from '@angular/core';
+import { MyappComponent } from './myapp/myapp.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.sass']
 })
-export class AppComponent {
+export class AppComponent implements OnInit,AfterViewInit {
+  
+  @ViewChild(MyappComponent) viewChild:any;
   title = 'secondproject';
+  message='';
   json: any[] = [
     {
   "name": "John Doe",
@@ -20,7 +24,20 @@ export class AppComponent {
   },
   "skills": ["JavaScript", "HTML", "CSS"],
   "isActive": true
+}  ];
+
+captureChild(event:string){
+  console.warn('event.....................................',event);
+  
+};
+
+ngAfterViewInit(): void {
+  // throw new Error('Method not implemented.');
+  this.message=this.viewChild.a;
 }
 
-  ];
+ngOnInit(): void {
+  // throw new Error('Method not implemented.');
+}
+
 };
