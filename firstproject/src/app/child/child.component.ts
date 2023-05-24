@@ -22,8 +22,8 @@ export class ChildComponent implements OnInit{
   sendMsgtoParent:string="I'm child... Dad..";
  
   
-   employeeDetails: any = [
-    { name: 1222, age: 22, gender: 'Male', address: { city: 'chennai', pincode: 600012 } },
+   employeeDetails: Employee[] = [
+    { name: 'siva', age: 22, gender: 'Male', address: { city: 'chennai', pincode: 600012 } },
     { name: 'Selva', age: 26, gender: 'Male', address: { city: 'chennai', pincode: 600012 } },
     { name: 'Mohan', age: 24, gender: 'Male', address: { city: 'chennai', pincode: 600012 } }
   ];
@@ -42,7 +42,7 @@ export class ChildComponent implements OnInit{
 
   buttonClick(){
     this.sendEmpDetails.emit(this.employeeDetails);
-    console.warn('@@@@@@@S',this.sendEmpDetails);
+    // console.warn('@@@@@@@S',this.sendEmpDetails);
     
 
   }

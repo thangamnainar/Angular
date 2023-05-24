@@ -9,6 +9,7 @@ import { DirectivesComponent } from './directives/directives.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { ComponentInteractionsComponent } from './component-interactions/component-interactions.component';
+import { TestComponent } from './test/test.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { ComponentInteractionsComponent } from './component-interactions/compone
     ParentComponent,
     ChildComponent,
     ComponentInteractionsComponent,
+    TestComponent,
  
   ],
   imports: [
