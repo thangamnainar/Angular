@@ -9,7 +9,7 @@ interface Person {
     city: string;
     pincode: number;
   };
-}
+};
 @Component({
   selector: 'app-parent',
   templateUrl: './parent.component.html',
@@ -17,8 +17,6 @@ interface Person {
 })
 export class ParentComponent implements AfterViewInit{
 
- 
-  
   reciveEmpDetails: Person[] = []; 
   getMsgFromChildAfteView:string='';
   @ViewChild(ChildComponent) vname:any;
@@ -32,7 +30,7 @@ export class ParentComponent implements AfterViewInit{
     { name:"Pathirana",age:20,gender:'Male'},
   ];
 
-  getEmpDetails($event:any){
+  getEmpDetails($event:Person[]){
     this.reciveEmpDetails=$event;
     console.warn($event);
     

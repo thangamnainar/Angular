@@ -86,10 +86,10 @@ export class MyappComponent implements OnInit,OnChanges,AfterViewInit,AfterConte
   };
 
   onClick2(e:any){
-    this.a='even tbinding';
+    // this.a='even tbinding';
     // this.isDisabled=false;
-    this.isDisabled=!this.isDisabled;
-    console.log('.....',e);
+    // this.isDisabled=!this.isDisabled;
+    console.warn('.....',e);
   }
   
 
