@@ -1,0 +1,17 @@
+<p>service works!</p>
+<table>
+    <thead>
+        <tr>
+            <td>Name</td>
+            <td>Age</td>
+            <td>Address</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let i of obj.persons">
+            <td>{{i.name}}</td>
+            <td>{{i.age}}</td>
+            <td>{{i.address}}</td>
+        </tr>
+    </tbody>
+</table>

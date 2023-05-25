@@ -1,7 +1,7 @@
 import { Component,AfterViewInit, ViewChild } from '@angular/core';
 import { ChildComponent } from '../child/child.component';
 
-interface Person {
+interface reciveEmpDetails {
   name: string;
   age: number;
   gender: string;
@@ -10,6 +10,11 @@ interface Person {
     pincode: number;
   };
 };
+interface sendPerson{
+  name:string | string[];
+  age:number;
+  gender:string;
+};
 @Component({
   selector: 'app-parent',
   templateUrl: './parent.component.html',
@@ -17,11 +22,14 @@ interface Person {
 })
 export class ParentComponent implements AfterViewInit{
 
-  reciveEmpDetails: Person[] = []; 
+  reciveEmpDetails: reciveEmpDetails[] = []; 
   getMsgFromChildAfteView:string='';
+  reciveemployeeDetails: reciveEmpDetails[]=[];
   @ViewChild(ChildComponent) vname:any;
+  @ViewChild(ChildComponent) vname1:any;
+  style:string='';
 
-  sendPerson:any=[
+  sendPerson:sendPerson[]=[
     { name:"Conway",age:20,gender:'Male'},
     { name:"Dube",age:25,gender:'Male'},
     { name:['Dhoni','thala'],age:41,gender:'Male'},
@@ -30,21 +38,26 @@ export class ParentComponent implements AfterViewInit{
     { name:"Pathirana",age:20,gender:'Male'},
   ];
 
-  getEmpDetails($event:Person[]){
+  getEmpDetails($event:reciveEmpDetails[]){
     this.reciveEmpDetails=$event;
     console.warn($event);
     
-    console.warn('.............', this.reciveEmpDetails);
+    // console.warn('.............', this.reciveEmpDetails);
     
   };
 
   ngAfterViewInit(): void {
-    // throw new Error('Method not implemented.');
     this.getMsgFromChildAfteView=this.vname.sendMsgtoParent
-    this.vname.sendMsgtoParent
     console.warn(this.getMsgFromChildAfteView);
+    this.reciveemployeeDetails=this.vname1.employeeDetails
+    // console.error('/////',this.reciveemployeeDetails);    
     
+  };
+
+  reciveColor($event:string){
+    this.style=`background-color:${$event}`;
+    console.warn('recive color',this.style);
     
   }
  
-};
+};     

@@ -35,7 +35,17 @@
 </table>
 
 <p>Child Message : {{getMsgFromChildAfteView}}</p>
+<!-- <h1>Child Message : {{reciveemployeeDetails}}</h1> -->
+<div class="box" [style]="style">
+    <ul>
+        <li *ngFor="let item2 of reciveemployeeDetails">
+            {{item2.name}}
+        </li>
+    </ul>
+</div>
+
+
 <!-- <h1>{{reciveEmpDetails|json}}..</h1> -->
 
-<app-child (sendEmpDetails)="getEmpDetails($event)"  [recivePerson]="sendPerson"></app-child>
+<app-child (sendEmpDetails)="getEmpDetails($event)"  [recivePerson]="sendPerson" (sendcolor)="reciveColor($event)"></app-child>
 

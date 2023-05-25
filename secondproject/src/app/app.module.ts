@@ -6,12 +6,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MyappComponent } from './myapp/myapp.component';
 import { LifeCycleHooksComponent } from './life-cycle-hooks/life-cycle-hooks.component';
+import { ServiceComponent } from './service/service.component';
+import { LearnserviceComponent } from './learnservice/learnservice.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MyappComponent,
     LifeCycleHooksComponent,
+    ServiceComponent,
+    LearnserviceComponent,
   
   ],
   imports: [

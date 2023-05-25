@@ -1,0 +1,30 @@
+<p>learnservice works!</p>
+
+<ul>
+    <li *ngFor="let i of obj.persons">
+        {{i.name}}
+    </li>
+</ul>
+
+<!-- Inside your template -->
+<input type="text" [(ngModel)]="searchQuery" placeholder="Search by name">
+<button (click)="search()">Search</button>
+<div *ngIf="filteredPersons.length > 0; else showDefault">
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Address</th>
+        </tr>
+        <tr *ngFor="let person of  filteredPersons">
+            <td>{{ person.name }}</td>
+            <td>{{ person.age }}</td>
+            <td>{{ person.address }}</td>
+        </tr>
+    </table>
+</div>
+
+<ng-template #showDefault>
+    <h4>Wrong Name</h4>
+</ng-template>
+
