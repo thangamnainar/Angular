@@ -8,6 +8,7 @@ import { MyappComponent } from './myapp/myapp.component';
 import { LifeCycleHooksComponent } from './life-cycle-hooks/life-cycle-hooks.component';
 import { ServiceComponent } from './service/service.component';
 import { LearnserviceComponent } from './learnservice/learnservice.component';
+import { ServiceService } from './service.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { LearnserviceComponent } from './learnservice/learnservice.component';
     AppRoutingModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [ServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
