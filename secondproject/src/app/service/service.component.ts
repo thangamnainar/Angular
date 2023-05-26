@@ -1,6 +1,5 @@
 import { Component ,OnInit} from '@angular/core';
-import { Studentlist } from '../../test';
-import { ServiceService } from '../service.service'; 
+import { ServiceService,Student ,Person} from '../service.service'; 
 
 @Component({
   selector: 'app-service',
@@ -17,13 +16,16 @@ export class ServiceComponent implements OnInit {
 
   // ];
   // obj=new Studentlist();
-  studentList:any;
+  studentList:Student[]=[];
+  personList:Person[]=[];
   constructor(public obj:ServiceService){
 
   }
+  
 
   ngOnInit(): void {
     // throw new Error('Method not implemented.');
     this.studentList=this.obj.getStudendlist();
+    this.personList=this.obj.getPersonList();
   }
 }

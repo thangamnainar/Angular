@@ -1,0 +1,20 @@
+<p>getusers works!</p>
+<!-- {{observable | json}} -->
+
+<table>
+    <h3>get 10 User data</h3>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>City</th>
+    </tr>
+    <tr *ngFor="let person of  getTenUser">
+        <td>{{person.id}}</td>
+        <td>{{ person.name }}</td>
+        <td>{{ person.email }}</td>
+        <td>{{ person.address.city }}</td>
+    </tr>
+</table>
+
+<h5>Users: {{getUser|json}}........</h5>

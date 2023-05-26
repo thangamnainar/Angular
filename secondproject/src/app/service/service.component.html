@@ -1,6 +1,7 @@
 <p>service works!</p>
 <table>
     <thead>
+        <h3>Student Details</h3>
         <tr>
             <td>Name</td>
             <td>Age</td>
@@ -12,6 +13,22 @@
             <td>{{i.name}}</td>
             <td>{{i.age}}</td>
             <td>{{i.address}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<table>
+    <thead>
+        <h3>Person Details</h3>
+        <tr>
+            <td>Name</td>
+            <td>Age</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let i of personList">
+            <td>{{i.name}}</td>
+            <td>{{i.age}}</td>
         </tr>
     </tbody>
 </table>

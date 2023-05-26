@@ -1,3 +1,5 @@
+import { log } from "console";
+
 class Engine{
     hp:number;
     power:number;
@@ -19,10 +21,12 @@ class Engine{
 class Car {
     e:Engine=new Engine(100,0)
     constructor(){
-
+        // console.log('inside Car');
+        
     }
 }
 // let ob=new Engine()
+let ob2=new  Car()
 
 
 // class Car {

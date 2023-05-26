@@ -9,6 +9,8 @@ import { LifeCycleHooksComponent } from './life-cycle-hooks/life-cycle-hooks.com
 import { ServiceComponent } from './service/service.component';
 import { LearnserviceComponent } from './learnservice/learnservice.component';
 import { ServiceService } from './service.service';
+import { HttpClientModule } from '@angular/common/http';
+import { GetusersComponent } from './getusers/getusers.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +19,14 @@ import { ServiceService } from './service.service';
     LifeCycleHooksComponent,
     ServiceComponent,
     LearnserviceComponent,
+    GetusersComponent,
   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
   ],
   providers: [ServiceService],
   bootstrap: [AppComponent]
