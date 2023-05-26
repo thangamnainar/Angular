@@ -9,16 +9,13 @@ import { ServiceService, Student, } from '../service.service';
 export class LearnserviceComponent implements OnInit {
   searchQuery: string = '';
   filteredPersons: Student[] = [];
-  url = 'http://localhost:3000/signup';
-  data = { username: 'John Doe', password: '123' };
 
-  // Inside your component
   search() {
     this.filteredPersons = this.studenList.filter(e =>
       e.name.toLowerCase().includes(this.searchQuery.toLocaleLowerCase())
     );
-    console.warn('~~~~~~~~', this.filteredPersons);
-    console.warn(this.searchQuery.toLowerCase());
+    // console.warn('~~~~~~~~', this.filteredPersons);
+    // console.warn(this.searchQuery.toLowerCase());
 
   }
   // obj = new Studentlist();
@@ -33,7 +30,7 @@ export class LearnserviceComponent implements OnInit {
 
     this.obj.getUserFromDatabase().subscribe(data => {
       this.getUser = data;
-      console.log('~~~~~~~', this.getUser);
+      // console.log('~~~~~~~', this.getUser);
     });
 
     // this.obj.postData(this.url,this.data).subscribe(

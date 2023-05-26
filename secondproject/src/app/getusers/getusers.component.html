@@ -1,7 +1,7 @@
 <p>getusers works!</p>
 <!-- {{observable | json}} -->
 
-<table>
+<!-- <table>
     <h3>get 10 User data</h3>
     <tr>
         <th>ID</th>
@@ -15,6 +15,26 @@
         <td>{{ person.email }}</td>
         <td>{{ person.address.city }}</td>
     </tr>
-</table>
+</table> -->
 
-<h5>Users: {{getUser|json}}........</h5>
+<!-- <h5>Users: {{getUser|json}}........</h5> -->
+<div class="">
+    <input type="text" [(ngModel)]="userName" placeholder="UserName">
+    <input type="password" [(ngModel)]="pass">
+    <input type="button" (click)="Createauser()" value="createButton">
+    <!-- {{uName}} -->
+    <!-- {{requestBody|json}} -->
+    <table>
+        <h3>get User From Database</h3>
+        <tr>
+            <th>ID</th>
+            <th>UserName</th>
+            <th>Password</th>
+        </tr>
+        <tr *ngFor="let person of  getUser">
+            <td>{{person.id}}</td>
+            <td>{{ person.username }}</td>
+            <td>{{ person.password }}</td>
+        </tr>
+    </table>
+</div>

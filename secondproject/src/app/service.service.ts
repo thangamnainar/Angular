@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from'@angular/common/http'
-import { Observable } from 'rxjs';
+import { Observable, Observer } from 'rxjs';
+// import { error } from 'console';
 
 @Injectable({
   providedIn: 'root'
@@ -48,8 +49,29 @@ export class ServiceService {
 
   getUserFromDatabase() {
     const url = 'http://localhost:3000/getAllUser';
-    return this.http.get<user[]>(url);
+    return this.http.get<getUser[]>(url);
   }
+  postData(postUrl:any,requestBody:any){
+  //   const postUrl = 'http://localhost:3000/adduser';
+
+  // const requestBody = {
+  //   username:'raj',
+  //   password:'1234'
+  // };
+
+    return this.http.post<postData[]>(postUrl, requestBody);
+  // .subscribe(
+  //   (response) =>{
+
+  //     console.log('POST request successful:', response);
+  // },
+  // (error)=>{
+  //   console.error('POST request error:', error);
+  // }  )
+
+
+  }
+
   
   
 }
@@ -75,7 +97,13 @@ interface address{
   street:string;
   city:string;
 }
-export interface user{
+export interface getUser{
+  id:number;
+  username:string;
+  password:string;
+};
+
+export interface postData{
   username:string;
   password:string;
 }
